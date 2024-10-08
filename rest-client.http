@@ -1,0 +1,59 @@
+GET http://localhost:3000
+
+
+### send 
+GET http://localhost:3000/songs
+
+### send 
+GET http://localhost:3000/songs/?page=1&limit=2
+
+
+### send 
+GET http://localhost:3000/songs/5
+
+### send 
+POST http://localhost:3000/songs
+Content-Type: application/json
+
+{
+    "title" : "Ini Lagu Baru Banget",
+    "artists" : ["Hendri", "Saya","Saya","Saya"],
+    "releasedDate" : "2022-09-29",
+    "duration" : "02:34",
+    "lyrics" : "Its a lyricsasdasdafasd"
+}
+
+### send 
+PUT http://localhost:3000/songs/3
+Content-Type: application/json
+
+{
+    "title" : "ini title Sudah Di edit",
+    "artists" : ["Hendri", "Saya","Saya","Suka"],
+    "releasedDate" : "2023-09-18",
+    "duration" : "02:20",
+    "lyrics" : "Its a My Love"
+}
+
+### send 
+DELETE  http://localhost:3000/songs/4
+
+
+### Create New Playlist
+POST   http://localhost:3000/playlists
+Content-Type: application/json
+
+{
+    "name" : "Feel Good Now",
+    "songs" : [
+        1
+    ],
+    "user" : 1
+}
+
+
+### Create New profile
+GET   http://localhost:3000/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hcnRpbkBnbWFpbC5jb20iLCJ1c2VySWQiOjExLCJpYXQiOjE3MjgxNzU1MjgsImV4cCI6MTcyODI2MTkyOH0.FQqh31k0IUFbnpfAm4JEpNMNhmKBNYBZ3O9whVmXekQ
+
+
